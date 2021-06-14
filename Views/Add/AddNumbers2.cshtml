@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "AddNumbers2";
+}
+
+<h2>AddNumbers2</h2>
+@{ if (@ViewBag.result != null)
+    {
+        <b> Result is :  @ViewBag.result </b>
+    }
+    else
+    {
+        using (Html.BeginForm("AddNumbers", "Add", FormMethod.Post))
+        {
+
+            @Html.Label("Enter No1")
+            @Html.TextBox("txtNo1");
+            <br />
+            @Html.Label("Enter No2");
+            @Html.TextBox("txtNo2");
+            <button type="submit"> Add </button>
+        }
+        }
+    }

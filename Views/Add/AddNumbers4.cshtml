@@ -1,0 +1,27 @@
+﻿@model WebApplication15.Models.Numbers
+@{
+    ViewBag.Title = "AddNumbers4";
+}
+
+<h2>AddNumbers4</h2>
+
+@{ if (@ViewBag.result != null)
+    {
+        <b> Result is :  @ViewBag.result </b>
+    }
+    else
+    {
+        using (Html.BeginForm(FormMethod.Post))
+        {
+                @Html.LabelFor(model => model.No1)
+                @Html.TextBoxFor(model => model.No1)
+                <br />
+                @Html.LabelFor(model => model.No2)
+                @Html.TextBoxFor(model => model.No2)
+                <br />
+                <button type="submit"> Add </button>
+
+            }
+        }
+
+    }
