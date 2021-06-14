@@ -1,0 +1,38 @@
+﻿@model WebApplication15.Models.Student
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+@{
+
+    if (ViewBag.msg != null)
+    {
+        <b> @ViewBag.msg </b>
+    }
+    else
+    {
+        using (Html.BeginForm(FormMethod.Post))
+        {
+            @Html.LabelFor(model => model.Id)
+            @Html.DisplayFor(model => model.Id)
+            <br />
+
+            @Html.LabelFor(model => model.Name)
+            @Html.DisplayFor(model => model.Name)
+            <br />
+
+            @Html.LabelFor(model => model.BatchCode)
+            @Html.DisplayFor(model => model.BatchCode)
+            <br />
+
+            @Html.LabelFor(model => model.Marks)
+            @Html.DisplayFor(model => model.Marks)
+            <br />
+
+            <button type="submit"> Delete </button>
+
+        }
+        }
+    }

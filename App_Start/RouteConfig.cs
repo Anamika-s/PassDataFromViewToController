@@ -15,6 +15,11 @@ namespace WebApplication15
 
 
             routes.MapRoute(
+             name: "StudentRoute",
+             url: "{controller}/{action}/{id}",
+             defaults: new { controller = "Student", action = "Index", id = UrlParameter.Optional }
+         );
+            routes.MapRoute(
               name: "AddRoute",
               url: "{controller}/{action}/{id}",
               defaults: new { controller = "Add", action = "AddNumbers1", id = UrlParameter.Optional }

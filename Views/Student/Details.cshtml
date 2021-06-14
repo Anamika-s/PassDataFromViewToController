@@ -1,0 +1,26 @@
+﻿@model WebApplication15.Models.Student
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+@{
+
+    if (@ViewBag.msg != null)
+    {
+        <b> @ViewBag.msg </b>
+        }
+        else
+        {
+
+        <h3> ID : @Model.Id  <br />
+    Name : @Model.Name <br />
+    Batch Code : @Model.BatchCode <br />
+    Marks : @Model.Marks
+    
+    </h3>
+
+        }
+
+    }

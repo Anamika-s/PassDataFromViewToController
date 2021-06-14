@@ -1,0 +1,39 @@
+﻿@model WebApplication15.Models.Student
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@{
+
+    if (ViewBag.msg != null)
+    {
+        <b> @ViewBag.msg </b>
+    }
+    else
+    {
+       using (Html.BeginForm(FormMethod.Post))
+        {
+            @Html.LabelFor(model => model.Id)
+            @Html.EditorFor(model => model.Id)
+            <br />
+
+            @Html.LabelFor(model => model.Name)
+            @Html.EditorFor(model => model.Name)
+            <br />
+
+            @Html.LabelFor(model => model.BatchCode)
+            @Html.EditorFor(model => model.BatchCode)
+            <br />
+
+            @Html.LabelFor(model => model.Marks)
+            @Html.EditorFor(model => model.Marks)
+            <br />
+
+            <button type="submit"> Edit </button>
+
+        }
+
+    }
+}
